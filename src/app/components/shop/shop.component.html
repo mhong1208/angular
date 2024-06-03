@@ -1,0 +1,67 @@
+<h2 class="title" style="margin-bottom: 20px;">DANH SÁCH SẢN PHẨM</h2>
+
+        <section class="main-product">
+            <div class="navbar-menu">
+                <div class="name-ul">
+                    Danh mục sản phẩm
+                </div>
+                <ul class="nav-link-navbar">
+                  <li><a href="#" (click)="filterByCategory('')">Tất cả sản phẩm</a></li>
+                    <li *ngFor="let category of categories">
+                      <a href="#" (click)="filterByCategory(category._id.toString())">{{ category.name }}</a>
+                    </li>
+                </ul>
+                <div class="name-ul">
+                    Bộ lọc sản phẩm
+                </div>
+                <ul class="nav-link-navbar">
+                    <h3>Giá <i class="fa-solid fa-caret-down"></i></h3>
+                    <ul id="lst-price">
+                        <li><a href="#">Giảm dần</a></li>
+                        <li><a href="#">Tăng dần</a></li>
+                    </ul>
+                    <h3>Màu sắc <i class="fa-solid fa-caret-down"></i></h3>
+                    <h3>Giới tính <i class="fa-solid fa-caret-down"></i></h3>
+                    <ul>
+                        <li><a href="#"><input type="checkbox" name="" id="">Nam</a></li>
+                        <li><a href="#"><input type="checkbox" name="" id="">Nữ</a></li>
+                        <li><a href="#"><input type="checkbox" name="" id="">Unisex</a></li>
+                    </ul>
+                </ul>
+
+            </div>
+            <div class="section-product">
+                <div class="head-product">
+                    <div class="col-2">Tất cả sản phẩm</div>
+                    <div class="col-2">
+                        <!-- <form class="look-up-pro">
+                          <input [(ngModel)]="searchName" name="searchName" type="text" class="" placeholder="Tìm sản phẩm tại đây.!">
+                          <button (click)="searchProducts()" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form> -->
+                        <form class="search-fo">
+                          <input [(ngModel)]="searchName" name="searchName" type="text" class="" placeholder="Tìm sản phẩm...">
+                          <button class="search-button" (click)="searchProducts()" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      </form>
+                    </div>
+                </div>
+                <div class="lst-product" id="product-list">
+                  <div class="col-4" *ngFor="let product of products">
+                    <a href="" [routerLink]="['/productDetail', product._id]"><div class="img-product">
+                        <img src="{{product.image}}
+                        " alt="">
+                    </div>
+                    <div class="name-product">
+                      {{product.name}}
+                    </div>
+                    <div class="price-product">
+                      {{product.price}}đ
+                    </div>
+                  </a>
+                    <div class="btn-product">
+                        <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" (click)="addToCart(product)" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>

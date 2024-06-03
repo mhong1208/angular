@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Hat"
+    },
+    {
+      "id": 2,
+      "name": "clothes"
+    },
+    {
+      "id": "3",
+      "name": "t-shirt"
+    },
+    {
+      "id": "4",
+      "name": "shirt"
+    },
+    {
+      "id": "5",
+      "name": "hdnc"
+    }
+  ]
+}

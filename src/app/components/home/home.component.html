@@ -1,0 +1,287 @@
+
+<div class="banner mb20">
+  <div class="slideshow-container">
+      <div class="mySlides fade" style="display: block;">
+        <img src="../assets/images/banner-slider.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../assets/images/banner-slider2.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../assets/images/banner-slider3.webp" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+<div class="products-new">
+  <h2 class="title">SẢN PHẨM MỚI NHẤT</h2>
+  <div class="list-products" id="product-list">
+      <div class="col-4" *ngFor="let product of newProducts">
+          <a href="" [routerLink]="['/productDetail', product._id]"><div class="img-product">
+              <img src="{{product.image}}
+              " alt="">
+          </div>
+          <div class="name-product">
+            {{product.name}}
+          </div>
+          <div class="price-product">
+            {{product.price}}đ
+          </div>
+        </a>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" (click)="addToCart(product)" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <!-- <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div> -->
+  </div>
+  <div class="btn-main">
+      <a href="#"><button class="btn-pri">Xem tất cả</button></a>
+  </div>
+</div>
+<div class="products-new">
+  <h2 class="title">SẢN PHẨM BÁN CHẠY</h2>
+  <div class="list-products">
+      <div class="col-4" *ngFor="let product of hotProducts">
+          <div class="img-product">
+              <img src="{{product.image}}" alt="">
+          </div>
+          <div class="name-product">
+            {{product.name}}
+          </div>
+          <div class="price-product">
+            {{product.price}}đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <!-- <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div> -->
+  </div>
+  <div class="btn-main">
+      <a href="#"><button class="btn-pri">Xem tất cả</button></a>
+  </div>
+</div>
+
+<div class="section-deal">
+  <img src="../assets/images/dale.webp" alt="">
+</div>
+<h2 class="title">DÀNH CHO BẠN</h2>
+<ul class="tab-product">
+  <a href="#">
+      <li>Áo thun</li>
+  </a>
+  <a href="#">
+      <li>Áo polo</li>
+  </a>
+  <a href="#">
+      <li>Áo sơ mi</li>
+  </a>
+  <a href="#">
+      <li>Áo khoác</li>
+  </a>
+
+</ul>
+<div class="your-product">
+  <div class="list-products">
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="../assets/images/AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+  </div>
+  <div class="btn-main">
+      <a href="#"><button class="btn-pri">Xem tất cả</button></a>
+  </div>
+</div>
+<h2 class="title">BÀI VIẾT MỚI NHẤT</h2>
+<div class="news">
+  <div class="list-news">
+      <div class="col-list-news">
+          <div class="img-news">
+              <img src="../assets/images/news-1.webp" alt="">
+          </div>
+          <div class="title-news">Thời trang giới trẻ lấy cảm hứng từ những năm 1990s</div>
+          <div class="date-news">12-08-2023</div>
+          <div class="text-news">Hãy để phong cách của bạn tỏa sáng và góp phần tạo nên không khí ấm áp, phấn khích trong...</div>
+          <a href="#" class="link">Đọc tiếp</a>
+      </div>
+      <div class="col-list-news">
+          <div class="img-news">
+              <img src="../assets/images/news-2.webp" alt="">
+          </div>
+          <div class="title-news">Thời trang giới trẻ lấy cảm hứng từ những năm 1990s</div>
+          <div class="date-news">12-08-2023</div>
+          <div class="text-news">Hãy để phong cách của bạn tỏa sáng và góp phần tạo nên không khí ấm áp, phấn khích trong...</div>
+          <a href="#" class="link">Đọc tiếp</a>
+      </div>
+      <div class="col-list-news">-
+          <div class="img-news">
+              <img src="../assets/images/news-3.webp" alt="">
+          </div>
+          <div class="title-news">Thời trang giới trẻ lấy cảm hứng từ những năm 1990s</div>
+          <div class="date-news">12-08-2023</div>
+          <div class="text-news">Hãy để phong cách của bạn tỏa sáng và góp phần tạo nên không khí ấm áp, phấn khích trong...</div>
+          <a href="#" class="link">Đọc tiếp</a>
+      </div>
+  </div>
+  <div class="btn-main">
+      <a href="#"><button class="btn-pri">Xem tất cả</button></a>
+  </div>
+</div>

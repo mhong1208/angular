@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Admin</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo-admin">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="./assets/images/img-admin.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">My Hong</span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-angle-right toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class="fa-solid fa-gauge icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="listCata.html">
+                            <i class="fa-solid fa-list icon"></i>
+                            <span class="text nav-text">Quản lí danh mục</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="listPro.html">
+                            <i class="fa-solid fa-shirt icon"></i>
+                            <span class="text nav-text">Quản lí sản phẩm</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-bag-shopping icon"></i>
+                            <span class="text nav-text">Quản lí đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket icon"></i>
+                            <span class="text nav-text">Đăng xuất</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <section class="home">
+        <div class="main-section">
+            <header class="header">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm">
+                    <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="nav-header">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                        <div class="user-admin">
+                            <img src="./assets/images/img-admin.jpg" alt="">
+                        </div>
+                </ul>
+            </header>
+            <div class="title-admin">Dashboard</div> <hr>
+            <ul class="box-info">
+				<li>
+					<i class="fa-solid fa-user bx"></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>Khách hàng</p>
+					</span>
+				</li>
+				<li>
+					<i class="fa-solid fa-bag-shopping bx"></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Đơn hàng</p>
+					</span>
+				</li>
+				<li>
+					<i class="fa-solid fa-shirt bx"></i>
+					<span class="text">
+						<h3>2543</h3>
+						<p>Sản phẩm</p>
+					</span>
+				</li>
+				<li>
+					<i class="fa-solid fa-dollar-sign bx"></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Danh thu</p>
+					</span>
+				</li>
+			</ul>
+            <div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Quản lí đơn hàng</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+                                <th>Khách hàng</th>
+								<th>Mã đơn hàng</th>
+								<th>Ngày đặt</th>
+								<th>Thành tiền</th>
+								<th>Trạng thái đơn hàng</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="./assets/images/img-admin.jpg">
+									<p>My Hong</p>
+								</td>
+								<td>HDYFGB1022</td>
+								<td>01-10-2021</td>
+                                <td>1.280.000đ</td>
+								<td><span class="status pending">Đang giao</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/images/img-admin.jpg">
+									<p>My Hong</p>
+								</td>
+								<td>HDYFGB1022</td>
+								<td>01-10-2021</td>
+                                <td>1.280.000đ</td>
+								<td><span class="status completed">Giao thành công</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/images/img-admin.jpg">
+									<p>My Hong</p>
+								</td>
+								<td>HDYFGB1022</td>
+								<td>01-10-2021</td>
+                                <td>1.280.000đ</td>
+								<td><span class="status completed">Giao thành công</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/images/img-admin.jpg">
+									<p>My Hong</p>
+								</td>
+								<td>HDYFGB1022</td>
+								<td>01-10-2021</td>
+                                <td>1.280.000đ</td>
+								<td><span class="status completed">Giao thành công</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./assets/images/img-admin.jpg">
+									<p>My Hong</p>
+								</td>
+								<td>HDYFGB1022</td>
+								<td>01-10-2021</td>
+                                <td>1.280.000đ</td>
+								<td><span class="status completed">Giao thành công</span></td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Danh mục sản phẩm</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Áo thun</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Áo sơ mi</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Áo polo</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Áo khoác</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Khác...</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

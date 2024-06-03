@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Quản lí sản phẩm</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo-admin">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="./assets/images/img-admin.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">My Hong</span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-angle-right toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class="fa-solid fa-gauge icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="listCata.html">
+                            <i class="fa-solid fa-list icon"></i>
+                            <span class="text nav-text">Quản lí danh mục</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="listPro.html">
+                            <i class="fa-solid fa-shirt icon"></i>
+                            <span class="text nav-text">Quản lí sản phẩm</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-bag-shopping icon"></i>
+                            <span class="text nav-text">Quản lí đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket icon"></i>
+                            <span class="text nav-text">Đăng xuất</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <section class="home">
+        <div class="main-section">
+            <header class="header">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm">
+                    <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="nav-header">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                        <div class="user-admin">
+                            <img src="./assets/images/img-admin.jpg" alt="">
+                        </div>
+                </ul>
+            </header>
+            <div class="nav-admin">
+                <div class="title-admin">Quản lí sản phẩm</div>
+                <a href="#"><button id="openPopupBtn"><i class="fa-solid fa-plus"></i></button></a>
+              </div>
+              <hr>
+              <div class="table-admin">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Mã sản phẩm</th>
+                      <th>Tên sản phẩm</th>
+                      <th>Hình ảnh</th>
+                      <th>Danh mục</th>
+                      <th>Số lượng</th>
+                      <th>Giá tiền</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="catelogy-list">
+                    <tr>
+                      <td>1</td>
+                      <td>AT_001</td>
+                      <td>Áo thun</td>
+                      <td><img src="./assets/images/AK_002_beige.png" alt=""></td>
+                      <td>Áo thun</td>
+                      <td><span class="status">Còn hàng</span></td>
+                      <td>
+                        <a href="#" id="openPopupUp" style="color: #00CC00;">
+                          <i class="fa-solid fa-pen-to-square"></i></a> | 
+                        <a href="#" style="color: #FF3333;"><i class="fa-solid fa-trash-can"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>AT_001</td>
+                      <td>Áo thun</td>
+                      <td><img src="./assets/images/AK_002_beige.png" alt=""></td>
+                      <td>Áo thun</td>
+                      <td><span class="status">Còn hàng</span></td>
+                      <td>
+                        <a href="#" id="openPopupUp" style="color: #00CC00;">
+                          <i class="fa-solid fa-pen-to-square"></i></a> | 
+                        <a href="#" style="color: #FF3333;"><i class="fa-solid fa-trash-can"></i></a>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+      
+              <div id="overlay" class="overlay"></div>
+              <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span  id="closePopupBtn"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="add-popup">
+                      <div class="title-popup">Thêm sản phẩm mới </div>
+                      <form id="popupForm">
+                        <label for="name" class="name-input">Mã sản phẩm:</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <label for="name" class="name-input">Tên sản phẩm:</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <label for="name" class="name-input">Hình ảnh:</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <label for="name" class="name-input">Danh mục:</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <label for="name" class="name-input">Giá sản phẩm:</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <input type="submit" value="Thêm" class="btn-add">
+                      </form>
+                    </div>
+                </div>
+              </div>
+              <div id="popup-up" class="popup-up">
+                <div class="popup-content">
+                    <span id="closePopupUp"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="up-popup">
+                      <div class="title-popup">Cập nhật sản phẩm</div>
+                      <form id="popupFormUp">       
+                        <label for="name" id="name" class="name-input">Tên danh mục:</label> <br>
+                        <input type="text" id="editname" name="name"><br>
+                        <span id="nameError" class="error"></span> 
+                        <input type="submit" value="Cập nhật" id="btn-save" data-id="">
+                      </form>
+                    </div>
+                </div>
+              </div>
+            
+		</div>
+
+	</section>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/popup.js"></script>
+
+</body>
+</html>

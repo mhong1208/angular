@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="/src/assets/stylesheets/admin.css">
+    <link rel="stylesheet" href="/src/assets/stylesheets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Quản lí danh mục</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="logo-admin">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+
+            <div class="image-text">
+                <span class="image">
+                    <img src="assets/images/img-admin.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">My Hong</span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-angle-right toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-gauge icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-list icon"></i>
+                            <span class="text nav-text">Quản lí danh mục</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="listProduct.html">
+                            <i class="fa-solid fa-shirt icon"></i>
+                            <span class="text nav-text">Quản lí sản phẩm</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa-solid fa-bag-shopping icon"></i>
+                            <span class="text nav-text">Quản lí đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class="fa-solid fa-right-from-bracket icon"></i>
+                            <span class="text nav-text">Đăng xuất</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <section class="home">
+        <div class="main-section">
+            <header class="header">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm">
+                    <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="nav-header-admin">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="user-admin">
+                        <img src="assets/images/img-admin.jpg" alt="">
+                    </div>
+                </ul>
+            </header>
+            <div class="nav-admin">
+              <div class="title-admin">Thêm danh mục mới</div>
+          </div>
+          <hr>
+            <div class="table-admin">
+                <form class="form-add-pro" (ngSubmit) = "onSubmit()" [formGroup] = "categoryForm">
+                    <div class="myForm">
+                        <div class="gr-form">
+                            <label for="productId">Tên danh mục:</label>
+                            <input type="text" class="gr-input" formControlName="name" [(ngModel)]="category.name" id="name" name="name" placeholder="Tên danh mục"><br>
+                        </div>
+                        <!-- <div class="gr-form">
+                            <label for="productId">Ghi chú:</label>
+                            <input type="text" class="gr-input" id="description" name="description" placeholder="Ghi chú"><br>
+                        </div> -->
+                          <div class="gr-form">
+                            <label for="description">Mô tả:</label>
+                            <input type="text" class="gr-input" id="description" [(ngModel)]="category.description" name="description" formControlName="description" placeholder="Mô tả">
+                         </div>
+                    </div>
+                    <div class="gr-form">
+                        <input type="submit" value="Thêm" class="btn-gr" id="btn-add">
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>

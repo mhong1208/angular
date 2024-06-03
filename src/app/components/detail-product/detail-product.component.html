@@ -1,0 +1,112 @@
+<div class="nav--link" *ngIf="product">
+  <a href="#">Trang chủ</a> | <a href="#">Sản phẩm</a> | <a href="" id="proName">{{product.name}}</a>
+</div>
+<section class="detail" *ngIf="product">
+  <div class="container-detail" id="productDetailContainer">
+      <div class="pro-left">
+          <div class="main-image-container">
+              <img src="{{product.image}}" id="mainImage" alt="pic-main" class="main-image">
+          </div>
+          <div class="thumbnails-container">
+              <img src="{{product.image}}"
+                  class="thumbnail" alt="">
+              <img src="https://product.hstatic.net/1000360022/product/id-006330_932d62cdd82c4595bbc9a6d8bc2bd719_master.jpg"
+                  class="thumbnail" alt="">
+              <img src="https://product.hstatic.net/1000360022/product/id-006333_c2196349636f4597943a30e1f72c7b69_master.jpg"
+                  class="thumbnail" alt="">
+              <img src="https://product.hstatic.net/1000360022/product/id-001520_e4415d30ec8e40039da50e0926469d76_compact.jpg"
+                  class="thumbnail" alt="">
+          </div>
+      </div>
+      <div class="pro-right">
+          <h3 class="name-pro">{{product.name}}</h3>
+          <h3 class="id-pro">Mã sản phẩm: {{product._id}}</h3>
+          <p class="price">{{product.price}}VNĐ</p>
+          <p class="size">Kích thước:</p>
+          <div class="btn-size">
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XL</button>
+          </div>
+          <p>Mô tả: {{product.description}}</p>
+          <p>Số lượng: {{product.quantity}}</p>
+          <div class="textbox">
+              <span class="plus" style="margin-right: 2px;"><i class="fa-solid fa-minus"></i></span>
+              <input type="number" min="1" value="1">
+              <span class="plus"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <div class="btn-link">
+              <a href="#">Quay lại</a>
+              <a href="#" (click)="addToCart(product)" class="buy-now" [routerLink]="['/productDetail', product._id]">Mua ngay</a>
+          </div>
+      </div>
+  </div>
+
+</section>
+
+<div class="products-new">
+  <h2 class="title">SẢN PHẨM LIÊN QUAN</h2>
+  <div class="list-products" id="relatedProductsContainer" >
+      <div class="col-4" *ngFor="let product of listProduct">
+          <div class="img-product">
+              <img src="{{product.image}}" alt="">
+          </div>
+          <div class="name-product">
+              {{product.name}}
+          </div>
+          <div class="price-product">
+              {{product.price}}đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <!-- <div class="col-4">
+          <div class="img-product">
+              <img src="./public/images//AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="./public/images//AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="img-product">
+              <img src="./public/images//AK_002_beige.png" alt="">
+          </div>
+          <div class="name-product">
+              Áo thun vibas white
+          </div>
+          <div class="price-product">
+              450.000đ
+          </div>
+          <div class="btn-product">
+              <a href="#" class="view"><i class="fa-solid fa-heart"></i></a>
+              <a href="#" class="add"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+      </div> -->
+  </div>
+</div>

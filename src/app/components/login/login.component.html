@@ -1,0 +1,37 @@
+<section class="login">
+    <div class="login-box mt30">
+      <div class="login-auth__login">
+        <div class="login-title">ĐĂNG NHẬP</div>
+        <div class="login-regiter">
+          Nếu bạn chưa có tài khoản, đăng ký
+          <a href="signup.html" class="regester-link"> tại đây</a>
+        </div>
+      </div>
+
+      <form action="" class="login-form" id="loginForm" (ngSubmit)="onLogin()">
+        <input type="text" id="email" [(ngModel)]="loginData.email" name="email" placeholder="Tên tài khoản hoặc Email" /> <br />
+        <div *ngIf="formTouched && !loginData.email" class="error-message">Vui lòng nhập email.</div>
+        <input type="password" id="password" [(ngModel)]="loginData.password" name="password" placeholder="Mật khẩu" />
+        <div *ngIf="formTouched && !loginData.password" class="error-message">Vui lòng nhập password.</div>
+        <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+        <div class="form-group-center">Quên mật khẩu?</div>
+        <div class="login-button">
+            <button type="submit" class="login-btn" >Đăng nhập</button>
+        </div>
+        <div class="login__center">
+            <div class="form-app">
+                <div class="form-app__fb">
+                    <button>
+                        <span><i class="fa-brands fa-facebook"></i> Facebook</span>
+                    </button>
+                </div>
+                <div class="form-app__google">
+                    <button>
+                        <span><i class="fa-brands fa-google"></i> Google</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</section>

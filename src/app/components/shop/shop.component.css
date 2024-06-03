@@ -1,0 +1,23 @@
+.look-up-pro{
+  border: 1px solid rgb(219, 215, 215);
+}
+
+.look-up-pro input{
+  padding: 5px 20px 5px 10px;
+  border: none;
+}
+
+.look-up-pro button{
+  padding: 5px 10px;
+  border: none;
+  color: #eee;
+  background-color: #2861cf;
+}
+
+.search-fo input{
+    width: 200px;
+    padding: 5px 10px;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #252A2B;
+}

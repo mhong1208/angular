@@ -1,0 +1,43 @@
+<section class="login">
+  <div class="container">
+    <div class="login-box">
+      <div class="login-auth__login">
+        <div class="login-title">ĐĂNG KÝ</div>
+        <div class="login-regiter">
+          Đã có tài khoản, đăng nhập
+          <a href="login.html" class="regester-link">tại đây </a>
+        </div>
+      </div>
+      <form id="formDangKy" class="login-form" (ngSubmit)="onRegister()">
+        <input type="text" id="name" name="name" [(ngModel)]="registerData.name" placeholder="Tên tài khoản" /> <br />
+        <div *ngIf="formTouched && !registerData.name" class="error-message">Vui lòng nhập tên tài khoản.</div>
+        <input type="text" id="email" name="email" [(ngModel)]="registerData.email" placeholder="Email" /> <br />
+        <div *ngIf="formTouched && !registerData.email" class="error-message">Vui lòng nhập địa chỉ email.</div>
+        <input type="text" id="phone" name="phone" [(ngModel)]="registerData.phone" placeholder="Phone" /> <br />
+        <div *ngIf="formTouched && !registerData.phone" class="error-message">Vui lòng nhập số điện thoại.</div>
+        <input type="text" id="password" id="password" name="password" [(ngModel)]="registerData.password" placeholder="Mật khẩu" /> <br />
+        <div *ngIf="formTouched && !registerData.password" class="error-message">Vui lòng nhập password.</div>
+        <input type="text" id="confirmPassword" name="confirm_pass" [(ngModel)]="registerData.confirm_pass" placeholder="Nhập lại mật khẩu" /> <br />
+        <div *ngIf="formTouched && !registerData.password" class="error-message">Vui lòng xác nhận password.</div>
+        <div *ngIf="registerData.password !== registerData.confirm_pass" class="error-message">Mật khẩu không khớp.</div>
+        <div class="login-button">
+            <button id="dangKy" class="login-btn dangKyy" type="submit">Đăng ký</button>
+        </div>
+        <div class="login__center">
+          <div class="form-app">
+            <div class="form-app__fb">
+              <button>
+                <span><i class="fa-brands fa-facebook"></i>Facebook</span>
+              </button>
+            </div>
+            <div class="form-app__google">
+              <button>
+                <span><i class="fa-brands fa-google"></i> Google</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
